@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,93 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-pS-oL1">
+                                <rect key="frame" x="40" y="175" width="730" height="730"/>
+                                <color key="backgroundColor" red="0.65405773722693383" green="0.44942879654836643" blue="0.1486619246113258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="730" id="MMI-Oa-ROP"/>
+                                    <constraint firstAttribute="width" constant="730" id="gpf-6Y-wW5"/>
+                                    <constraint firstAttribute="width" secondItem="8ug-pS-oL1" secondAttribute="height" multiplier="1:1" id="nSC-vh-5ez"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mine Sweeper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dov-4y-sJ4">
+                                <rect key="frame" x="264" y="93.5" width="282" height="51.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="44"/>
+                                <color key="textColor" red="1" green="0.477352867937342" blue="0.052415563522822506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psL-fc-6cn">
+                                <rect key="frame" x="40" y="929" width="280" height="69"/>
+                                <color key="backgroundColor" red="1" green="0.47735286789999998" blue="0.05241556352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="H1d-Iz-pW0"/>
+                                    <constraint firstAttribute="width" constant="280" id="q71-ae-j6I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Discover"/>
+                                <connections>
+                                    <action selector="useDiscover:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8c-fj-d4j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7c-Q6-dHK">
+                                <rect key="frame" x="490" y="929" width="280" height="69"/>
+                                <color key="backgroundColor" red="1" green="0.47735286789999998" blue="0.05241556352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="PhV-Wx-2P6"/>
+                                    <constraint firstAttribute="width" constant="280" id="mUk-TD-leO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Flag"/>
+                                <connections>
+                                    <action selector="useFlag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NgH-zg-BMR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hp-7f-kXq">
+                                <rect key="frame" x="222.5" y="928" width="365" height="69"/>
+                                <color key="backgroundColor" red="1" green="0.47735286789999998" blue="0.05241556352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="WK1-9F-Oea"/>
+                                    <constraint firstAttribute="width" constant="365" id="gDd-ei-Kpp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNK-ev-LhM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.45501740124760842" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ug-pS-oL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ll-0l-mfh"/>
+                            <constraint firstItem="psL-fc-6cn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="EXc-4R-muD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L7c-Q6-dHK" secondAttribute="trailing" constant="40" id="KAU-8d-wCc"/>
+                            <constraint firstItem="6hp-7f-kXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LDt-os-FXj"/>
+                            <constraint firstItem="6hp-7f-kXq" firstAttribute="top" secondItem="8ug-pS-oL1" secondAttribute="bottom" constant="23" id="Phv-gT-3sE"/>
+                            <constraint firstItem="Dov-4y-sJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PwJ-Nw-Zoj"/>
+                            <constraint firstItem="L7c-Q6-dHK" firstAttribute="top" secondItem="8ug-pS-oL1" secondAttribute="bottom" constant="24" id="Vir-aC-xdk"/>
+                            <constraint firstItem="psL-fc-6cn" firstAttribute="top" secondItem="8ug-pS-oL1" secondAttribute="bottom" constant="24" id="bVe-eO-4fv"/>
+                            <constraint firstItem="8ug-pS-oL1" firstAttribute="top" secondItem="Dov-4y-sJ4" secondAttribute="bottom" constant="30" id="bmK-z3-TWo"/>
+                            <constraint firstItem="8ug-pS-oL1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oBI-sc-lNV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TitleLabel" destination="Dov-4y-sJ4" id="XS7-gx-y07"/>
+                        <outlet property="discoverButton" destination="psL-fc-6cn" id="dfl-Qe-m4f"/>
+                        <outlet property="flagButton" destination="L7c-Q6-dHK" id="lS2-n2-3Ap"/>
+                        <outlet property="flowerBedView" destination="8ug-pS-oL1" id="v1c-2S-ZmX"/>
+                        <outlet property="playAgainButton" destination="6hp-7f-kXq" id="JXV-nv-lPB"/>
+                        <outlet property="titleLabel" destination="Dov-4y-sJ4" id="Znm-CX-bws"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.28125" y="78.515625"/>
         </scene>
     </scenes>
 </document>
