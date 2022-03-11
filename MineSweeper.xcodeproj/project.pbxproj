@@ -15,6 +15,7 @@
 		5BABC3E727D7E8CF00478F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABC3E527D7E8CF00478F4D /* LaunchScreen.storyboard */; };
 		5BCCDF7527D8939D009D9D3E /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BCCDF7427D8939C009D9D3E /* FredokaOne-Regular.ttf */; };
 		5BCCDF7927D926B3009D9D3E /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCDF7827D926B3009D9D3E /* Cell.swift */; };
+		5BD5C41127DBAD28000CFF25 /* preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5C41027DBAD28000CFF25 /* preview.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		5BABC3E827D7E8CF00478F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BCCDF7427D8939C009D9D3E /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		5BCCDF7827D926B3009D9D3E /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		5BD5C40F27DBACAC000CFF25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5BD5C41027DBAD28000CFF25 /* preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		5BABC3D927D7E8C300478F4D /* MineSweeper */ = {
 			isa = PBXGroup;
 			children = (
+				5BD5C41027DBAD28000CFF25 /* preview.png */,
 				5BCCDF7327D89382009D9D3E /* Fonts */,
 				5BABC3DA27D7E8C300478F4D /* AppDelegate.swift */,
 				5BABC3DC27D7E8C300478F4D /* SceneDelegate.swift */,
@@ -69,6 +73,7 @@
 				5BABC3E527D7E8CF00478F4D /* LaunchScreen.storyboard */,
 				5BABC3E827D7E8CF00478F4D /* Info.plist */,
 				5BCCDF7827D926B3009D9D3E /* Cell.swift */,
+				5BD5C40F27DBACAC000CFF25 /* README.md */,
 			);
 			path = MineSweeper;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				5BABC3E727D7E8CF00478F4D /* LaunchScreen.storyboard in Resources */,
 				5BABC3E427D7E8CF00478F4D /* Assets.xcassets in Resources */,
 				5BABC3E227D7E8C300478F4D /* Main.storyboard in Resources */,
+				5BD5C41127DBAD28000CFF25 /* preview.png in Resources */,
 				5BCCDF7527D8939D009D9D3E /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
